@@ -12,3 +12,13 @@ resource "vault_approle_auth_backend_role" "example" {
   token_max_ttl = 50
   secret_id_num_uses = 0
 }
+
+
+resource "vault_auth_backend" "example" {
+  type = "github"
+
+  tune {
+    max_lease_ttl      = "90000s"
+    listing_visibility = "unauth"
+  }
+}
