@@ -23,7 +23,7 @@ resource "vault_auth_backend" "example" {
   }
 }
 
-resource "vault_auth_backend" "example" {
+resource "vault_auth_backend" "example2" {
   type = "aws"
 
   tune {
