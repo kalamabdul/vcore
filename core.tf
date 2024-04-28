@@ -22,3 +22,12 @@ resource "vault_auth_backend" "example" {
     listing_visibility = "unauth"
   }
 }
+
+resource "vault_auth_backend" "example" {
+  type = "aws"
+
+  tune {
+    max_lease_ttl      = "90000s"
+    listing_visibility = "unauth"
+  }
+}
