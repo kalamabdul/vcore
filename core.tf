@@ -13,8 +13,9 @@ resource "vault_approle_auth_backend_role" "example" {
   secret_id_num_uses = 0
 }
 
+
 resource "vault_auth_backend" "example" {
-  type = "aws"
+  type = "github"
 
   tune {
     max_lease_ttl      = "90000s"
